@@ -1,19 +1,52 @@
 {
-  "extends": "prettier",
-  "parserOptions": {
-    "ecmaVersion": 2016,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
+    "extends": [
+        "prettier",
+        "airbnb"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 2016,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "plugins": [
+        "prettier"
+    ],
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true
+    },
+    "rules": {
+        "linebreak-style": 0,
+        "object-curly-spacing": [
+            "warn",
+            "never"
+        ],
+        "max-len": [
+            "error",
+            120,
+            4
+        ],
+        "comma-dangle": [
+            "error",
+            {
+                "arrays": "always-multiline",
+                "objects": "always-multiline",
+                "imports": "always-multiline",
+                "exports": "always-multiline",
+                "functions": "ignore"
+            }
+        ],
+        "react/jsx-filename-extension": "off",
+        "prettier/prettier": [
+            "error",
+            {
+                "trailingComma": "es5",
+                "singleQuote": true,
+                "bracketSpacing": false
+            }
+        ]
     }
-  },
-  "plugins": ["prettier"],
-  "env": {
-    "es6": true,
-    "node": true
-  },
-  "rules": {
-    "max-len": ["error", 120, 4],
-    "prettier/prettier": ["error", {"trailingComma": "es5", "singleQuote": true}]
-  }
 }
